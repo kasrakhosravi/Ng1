@@ -5,7 +5,7 @@
         .module('shopicruit')
         .controller('shopicruitController', shopicruitController);
 
-    function shopicruitController(shopicruitService, $filter) {
+    function shopicruitController(shopicruitService) {
         var vm = this;
 
         // Default Binding

@@ -15,6 +15,12 @@
         /**
          * Private Methods
          */
+        function fetchProducts() {
+            return $http.get('http://ui-form-data.getsandbox.com/shopicruit').then(function (response) {
+                return response
+            })
+        }
+
         function filterProducts(list, archetype) {
             var result = [];
 
@@ -33,12 +39,6 @@
                 sum += parseFloat(filtered.variants[i].price);
             }
             return sum;
-        }
-
-        function fetchProducts() {
-            return $http.get('http://ui-form-data.getsandbox.com/shopicruit').then(function (response) {
-                return response
-            })
         }
 
         /**
