@@ -1,0 +1,27 @@
+<head>
+    <title>Shopicruit</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body ng-app="shopicruit">
+
+    <div class="panel panel-default" ng-controller="shopicruitController as vm">
+        <div class="panel-heading">Here are your purchased items</div>
+        <div class="panel-body">
+            <ul ng-repeat="product in vm.products">
+                <li>{{ product.title }}</li>
+            </ul>
+        </div>
+        <div class="panel-footer">
+            <p ng-bind=" 'Thank you for shopping with us. Your total order price is $' + vm.totalPrice(vm.products)"></p>
+        </div>
+    </div>
+
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="app.js"></script>
+  <script src="components/shopicruit.controller.js"></script>
+  <script src="components/shopicruit.service.js"></script>
+
+</body>
