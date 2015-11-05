@@ -5,10 +5,10 @@ module.exports = function(config){
 
     files : [
       'app/bower_components/angular/angular.js',
-      'app/bower_components/angular-route/angular-route.js',
       'app/bower_components/angular-mocks/angular-mocks.js',
-      'app/components/**/*.js',
-      'app/view*/**/*.js'
+      'app/app.js',
+      'app/components/shopicruit.service.js',
+      'app/components/shopicruit.service.spec.js'
     ],
 
     autoWatch : true,
